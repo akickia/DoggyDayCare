@@ -1,0 +1,76 @@
+.dog-container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  color: black
+}
+
+.dog-card {
+  display: flex;
+  flex-direction: column;
+  width: 18.75rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.light {
+  background-color: rgb(216, 232, 216);
+}
+
+.dark {
+  background-color: rgb(226, 210, 210);
+  opacity: 0.7;
+}
+
+.light button {
+  background-color: red;
+  color: white
+}
+
+.dark button {
+  background-color: green;
+  color: white
+}
+
+.dog-card img {
+  max-width: 100%;
+  max-height: 250px;
+  border-radius: 5px;
+}
+
+.dog-card section {
+  position: relative;
+}
+
+.small {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .4em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25%;
+  opacity: 0;
+  text-shadow: 1px 1px 2px white;
+}
+
+.dog-card section:hover img {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.dog-card section:hover .small {
+  opacity: 1;
+  z-index: 1;
+}
+
+.dog-card div {
+  margin-top: auto
+}
+
+hr {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
