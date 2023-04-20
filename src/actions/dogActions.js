@@ -7,3 +7,11 @@ export const changeStatus = (chipNumber, dogStatus) => (
   }
 )
 
+export const addDog = (newDog) => (
+  {
+    type: "ADD_DOG",
+    payload: newDog
+  }
+)
+
+

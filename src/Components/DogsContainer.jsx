@@ -4,8 +4,10 @@ import {useSelector} from 'react-redux'
 import Filter from "./Filter";
 
 export default function DogsContainer() {
-
+  
+  
   const dogs = useSelector((state) => state);
+  console.log(dogs)
   
   let dogCard = dogs.map((dog, i) => {
   return <DogsCard key={i} dog={dog} />

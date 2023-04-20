@@ -1,0 +1,13 @@
+.add-dog-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select {
+  margin: 1rem;
+  padding: .5rem
+}
+
+.add-dog-container div {
+  display: flex;
+}

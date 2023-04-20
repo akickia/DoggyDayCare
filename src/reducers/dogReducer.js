@@ -8,7 +8,14 @@ const dogReducer = (state = store, action) => {
           return { ...dog, present: action.status };
         }
         return dog;
-      });
+      })
+    case "ADD_DOG":
+      return [
+        action.payload, 
+        ...state
+        
+      ]
+      
     default:
       return state;
   }

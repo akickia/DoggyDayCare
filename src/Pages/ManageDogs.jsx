@@ -1,7 +1,14 @@
-
+import AddDogForm from "../Components/AddDogForm"
+import "../Styles/manage.css"
 
 export default function ManageDogs() {
   return (
-    <div>ManageDogs</div>
+    <article>
+      <h1>Add new dog</h1>
+
+    <AddDogForm />
+
+
+    </article>
   )
 }
