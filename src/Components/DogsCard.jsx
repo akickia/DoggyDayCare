@@ -1,9 +1,9 @@
 import { changeStatus } from "../actions/dogActions"
 import { useDispatch } from "react-redux"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 
-export default function DogsCard({action, dog}) {
+export default function DogsCard({dog}) {
   const dispatch = useDispatch()
   function handleStatus() {
     const newStatus = !mode
@@ -13,6 +13,9 @@ export default function DogsCard({action, dog}) {
 
 
     const [mode, setMode] = useState(dog.present)
+    useEffect(() => {
+      setMode(dog.present);
+    }, [dog.present]);
     
   return (
    <article className={mode ? "dog-card light" : "dog-card dark"}>

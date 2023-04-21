@@ -4,7 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  color: black
+  color: black;
+  padding: 1rem
 }
 
 .dog-card {

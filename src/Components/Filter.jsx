@@ -1,17 +1,19 @@
-import "../Styles/filter.css"
-import { useSelector } from 'react-redux'
+// import "../Styles/filter.css"
+// import { useDispatch } from 'react-redux'
 
-export default function Filter() {
-  const dogs = useSelector((state) => state);
-  return (
-    <section className="filter">
-      <label htmlFor="select">Filter</label>
-      <select id="select">
-        <option defaultChecked value="all">All dogs</option>
-        <option value="present">Present dogs</option>
-        <option value="sex">Sex</option>
-        <option value="breed">Breed</option>
-      </select>
-    </section>
-  )
-}
+
+// export default function Filter() {
+//   const dispatch = useDispatch()
+  
+
+
+//   return (
+//     <section className="filter">
+//       <label htmlFor="select">Filter</label>
+//       <select className="selectVal" onChange={(event) => {filterDogs(event)}} id="select">
+//         <option checked>All dogs</option>
+//         <option>Present dogs</option>
+//       </select>
+//     </section>
+//   )
+// }

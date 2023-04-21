@@ -1,6 +1,7 @@
 import { store } from "../store/dogStore";
 
-const dogReducer = (state = store, action) => {
+const initialState = store
+const dogReducer = (state = initialState, action) => {
   switch (action.type) {
     case "CHANGE_STATUS":
       return state.map(dog => {
@@ -15,7 +16,8 @@ const dogReducer = (state = store, action) => {
         ...state
         
       ]
-      
+
+
     default:
       return state;
   }

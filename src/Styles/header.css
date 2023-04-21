@@ -1,0 +1,12 @@
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  min-height: 80px;
+  z-index: 5;
+}
