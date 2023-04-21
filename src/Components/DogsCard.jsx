@@ -1,12 +1,19 @@
+import { useNavigate } from "react-router-dom"
 import { changeStatus } from "../actions/dogActions"
 import { useDispatch } from "react-redux"
 
 
 export default function DogsCard({dog}) {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   function handleStatus() {
     const newStatus = !dog.present
     dispatch(changeStatus(dog.chipNumber, newStatus));
+  }
+
+  function setLocalStorage(dog) {
+    localStorage.setItem("dog", JSON.stringify(dog))
+    navigate("../details")
   }
 
     
@@ -25,7 +32,8 @@ export default function DogsCard({dog}) {
       <p>Owner: {dog.owner.name} {dog.owner.lastName}</p>
     </div>
     
-    <button onClick={() => {handleStatus()}}>{dog.present ? 'Check out' : 'Check in'}</button>
+    <button className="status" onClick={() => {handleStatus()}}>{dog.present ? 'Check out' : 'Check in'}</button>
+    <button className="details" onClick={() => {setLocalStorage(dog)}}>See details</button>
    </article>
   )
 }

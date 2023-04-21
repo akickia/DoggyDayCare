@@ -3,12 +3,12 @@ import "../Styles/manage.css"
 
 export default function ManageDogs() {
   return (
-    <article>
+    <main>
       <h1>Add new dog</h1>
 
     <AddDogForm />
 
 
-    </article>
+    </main>
   )
 }

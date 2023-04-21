@@ -25,12 +25,12 @@
   opacity: 0.7;
 }
 
-.light button {
+.light .status {
   background-color: red;
   color: white
 }
 
-.dark button {
+.dark .status {
   background-color: green;
   color: white
 }
