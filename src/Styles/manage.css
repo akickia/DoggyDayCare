@@ -18,3 +18,9 @@ input, select {
 input[type=checkbox] {
   width: unset
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

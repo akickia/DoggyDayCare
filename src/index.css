@@ -29,7 +29,10 @@ a:hover {
 }
 
 main {
-  padding-bottom: 3rem
+  padding-bottom: 3rem;
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
 }
 
 .App {

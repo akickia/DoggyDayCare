@@ -35,7 +35,8 @@ export default function AddDogForm() {
 }
 
   return (
-    <>
+    <section>
+    <h2>Add new dog to register:</h2>
     <form className="add-dog-container">
       <input onChange={(e) => {setName(e.target.value)}} type="text" placeholder="dogs name"></input>
       <input onChange={(e) => {setBreed(e.target.value)}} type="text" placeholder="breed"></input>
@@ -57,6 +58,6 @@ export default function AddDogForm() {
          
     </form>
     <button onClick={() => addNewDog()}>SUBMIT</button>
-    </>
+    </section>
   )
 }
