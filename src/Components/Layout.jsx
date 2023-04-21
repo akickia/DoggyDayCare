@@ -15,10 +15,8 @@ export default function Layout() {
         <Route path="/dogs" element={<PresentDogs />}></Route>
         <Route path="/manage" element={<ManageDogs />}></Route>
         <Route path="/about" element={<About />}></Route>
-
       </Routes>
-      <Footer />
-    
+      <Footer></Footer>
     </BrowserRouter>
   )
 }
