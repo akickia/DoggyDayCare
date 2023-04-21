@@ -1,6 +1,5 @@
 import { changeStatus } from "../actions/dogActions"
 import { useDispatch } from "react-redux"
-import { useState, useEffect } from "react"
 
 
 export default function DogsCard({dog}) {

@@ -4,6 +4,7 @@ import ManageDogs from "../Pages/ManageDogs"
 import About from "../Pages/About"
 import PresentDogs from "../Pages/PresentDogs"
 import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Layout() {
   return (
@@ -16,6 +17,7 @@ export default function Layout() {
         <Route path="/about" element={<About />}></Route>
 
       </Routes>
+      <Footer />
     
     </BrowserRouter>
   )

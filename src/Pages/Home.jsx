@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate()
   return (
-    <article>
+    <article className="base">
 
     <h1>Doggy DayCare</h1>
     <img style={{maxWidth:"80%"}} src="https://images.unsplash.com/photo-1494947665470-20322015e3a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />

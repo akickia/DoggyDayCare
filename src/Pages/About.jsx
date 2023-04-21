@@ -1,11 +1,14 @@
 
 export default function About() {
   return (
-    <div>
+    <article className="base">
       <h1>About</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos obcaecati suscipit est magni atque 
-      minus nemo fuga! Id aliquam laboriosam voluptate provident eaque recusandae dignissimos 
-      consequuntur accusamus, a, tempore vel.</p>
-    </div>
+        <p>Dogs in dayCare - see dogs in our register</p>
+        <p>Hover over image to see chip number</p>
+        <p>Click see more to view more details</p>
+        <p>Change status from present to non-present by clicking button</p>
+        <p>Only show present dog by using the filter function</p>
+        <p>In manage dog you can add new dogs</p>
+    </article>
   )
 }
