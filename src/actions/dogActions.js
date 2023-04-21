@@ -14,6 +14,13 @@ export const addDog = (newDog) => (
   }
 )
 
+export const removeDog = () => (
+  {
+    type: "ADD_DOG",
+    payload: newDog
+  }
+)
+
 
 
 
