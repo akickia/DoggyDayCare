@@ -6,37 +6,36 @@ import { useEffect, useState } from "react";
 export default function DogsContainer() {
   
   
-  const [presentDogs, setPresentDogs] = useState([])
+  
   const dogs = useSelector((state) => state);
-  console.log(dogs)
   const [selectedChoise, setSelectedChoise] = useState(dogs)
   const [selectedFilter, setSelectedFilter] = useState("all")
-
-  useEffect(() => {
-    handleFilter(selectedFilter)
-  }, [selectedFilter])
+  const [presentDogs, setPresentDogs] = useState(dogs)
+  
+ useEffect(() => {
+    setSelectedChoise(handleFilter(selectedFilter));
+  }, [selectedFilter, dogs])
   
   function filterPresentDogs() {
-    setPresentDogs(dogs);
-    let dogsCopy = [...presentDogs];
-    let filteredDogs = dogsCopy.filter((dog) => dog.present === true);
-    return filteredDogs
+    let filteredDogs = dogs.filter((dog) => dog.present === true);
+    return filteredDogs;
   }
 
   function handleFilter(value) {
     if (value === "present") {
-      console.log(value)
-      setSelectedChoise(filterPresentDogs());
-    }
-    else {
-      console.log(value)
-      setSelectedChoise(dogs)
+      return filterPresentDogs();
+    } else {
+      return dogs;
     }
   }
+ 
+ 
 
-//   let dogCard = selectedChoise.map((dog, i) => {
-//   return <DogsCard key={i} dog={dog} />
-// })
+  let dogCard = selectedChoise.map((dog, i) => {
+    return <DogsCard key={i} dog={dog} />})
+
+
+
   return (
     <>
     <h1>Dogs in daycare
@@ -49,8 +48,7 @@ export default function DogsContainer() {
       </select>
     </section>
       <section className="dog-container">
-        {selectedChoise.map((dog, i) =>
-          <DogsCard key={i} dog={dog} />)}
+        {dogCard}
       </section>
     </>
   )
